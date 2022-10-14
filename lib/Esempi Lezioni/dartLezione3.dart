@@ -1,4 +1,7 @@
 import "EsempioImportazione.dart";
+//import "dart:developer";
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 /**
  * In dart sono supportati i classici tipi dei linguaggi ad alto livello
@@ -88,3 +91,48 @@ funzioneTest(){
   //print(_variabilePrivata); //da errore
 }
 
+/**
+ * è possibile importare tutte le libreriw già presenti nel sdk di dart, utilizzando lo schema:
+ *
+ * import "dart:nome_libreria"
+ *
+ * Alcune sono già importate di default, tipo la dart_core
+ */
+
+//import "dart:developer";
+
+/**
+ * è possibile importare dall'esterno, queste sono presenti nel sito "pub.dev" e possono essere importate seguendo la procedura:
+ *  1)cercare la libreria di nostro interesse
+ *  2)copiare la dipendenza, per esempio: font_awesome_flutter: 10.2.1
+ *  3)copiarlo nella sezione dependencies di pubspec.yaml
+ *  4)nel prompt in alto a destra premere: pub get
+ *  5)importarla nel file attraverso lo schema: "package:package/libreria.dart", per esempio
+ *    import 'package:font_awesome_flutter/font_awesome_flutter.dart'
+ *
+ *
+ * Alcune sono già importate di default, tipo la dart_core
+ */
+
+/**
+ * alcuni tag utili sono cost e final che vincolano il valore delle variabili
+ * const: può essere utilizzata con tipo o senza tipo, dichiara una variabile come costante
+ *        immutabile, non è possibile creare in questo modo costanti a runtime
+ *
+ * final: può essere utilizzata con o senza tipo, permette di definire costanti a run time
+ */
+
+
+/**
+ * Le stringhe si possono concatenare nel seguente modo:
+ * String s2 = stringa1 + stringa2;
+ *
+ * è possibile creare stringhe nel seguente modo:
+ * String s3 = "$expression!";
+ *
+ * Dove expression è un espressione che da in output una stringa, notare che in dart non
+ * esiste il typecasting automatico! se expression non ritorna una stringa questa non viene castata
+ * Funziona senza le parentesi graffe se e solo se expression è una variabile
+ */
+
+//TODO finire ultimi 34 minuti lezione 3
