@@ -135,4 +135,95 @@ funzioneTest(){
  * Funziona senza le parentesi graffe se e solo se expression è una variabile
  */
 
-//TODO finire ultimi 34 minuti lezione 3
+/**
+ * Esiste il tipo num che può tenere un qualsiasi valore numerico dei tipi base, evitando la
+ *  distinzione tra double, float etc...
+ */
+
+
+/**
+ * Possiamo fare il parsing di una stringa rappresentante un numero attraverso tipoNumerico.parse(input)
+ *
+ * p.e int numero = int.parse("69")
+ */
+
+
+/**
+ * Tre tipi (strrutture dati) particolari ci fanno comodo:
+ *  1) array: in dart si costruiscono con List (da non confondere con le liste degli altri linguaggi)
+ *
+ *     List array = {el1, el2, ..., eln}; //possiamo avere diversi tipi nell'array... ...meglio evitare...
+ *
+ *     I tipi degli array se non detto nulla sono Dynamic, con tutti i casini che ne conseguono.
+ *     Per specificare il tipo degli array si utilizza la notazione diamante:
+ *
+ *     List<tipo> array = {el1, el2, ..., el3}
+ *
+ *     Possiamo aggiungrere elementi agli arrai utilizzando il metodo add:
+ *
+ *     array.add(el);
+ *
+ *     Posso assegnare i valori agli slot degli array come negli altri linguaggi, se accedo ad una
+ *      cella con indice outofbound ho errore a differenza di javascript.
+ *
+ *  2) set: è un insieme di elementi non ordinati.
+ *
+ *     Set set = Set() //la keyword new non è obbligatoria in dart, se si mette si ottiene lo stesso
+ *                       risultato che mettendolo
+ *
+ *     Il tipo funziona esattamente come le liste: posso specificare il tipo degli elementi attraverso
+ *      la notazione dei generics:
+ *
+ *     Set<int> intSet = Set()
+ *
+ *    Non posso accedere ad elementi specificando l'indice perchè il set ha come semntica quello di
+ *    raggruppare elementi senza un ordine specificato
+ *
+ *
+ *  3) map: è un insieme di coppie chiavi valore, sia la chiave che il valore possono avere uno specifico
+ *          tipo ma ingenere la chiave è un intero o una stringa (in genere un qualsiasi tipo che
+ *          utilizziamo come codice identificativo univoco)
+ *
+ *     p.e. Map myMap = {
+ *              "key1" : "value1",
+ *              "key2" : "value2",
+ *     };
+ *
+ *     possiamo aggiungere banalmente una nuova coppia come:
+ *
+ *     p.e. myMap["key3"] = "value3";
+ *
+ *     Le mappe sono utili per fornire un metodo di accesso ad alcuni specifici valori
+ */
+
+/**
+ * In dart ci sono tutti gli operatori classici di quelli ad alto livello, alcuni però sono specifici di dart:
+ *  ?? : Called also null operator. This operator returns expression on its left, except if it is null,
+ *       and if so, it returns right expression.
+ *
+ *  ??= : Called also null-aware assignment. This operator assigns value to the variable on its left,
+ *        only if that variable is currently null.
+ *
+ *  ?.  : Called also null-aware access(method invocation). This operator prevents you from crashing your
+ *        app by trying to access a property or a method of an object that might be null
+ *
+ *  …?  : Called also null-aware spread operator. This operator prevents you from adding
+ *        null elements using spread operator(lets you add multiple elements into your collection):
+ *
+ *  ref: https://jelenaaa.medium.com/what-are-in-dart-df1f11706dd6
+ *
+ *  Possiamo utilizzare comandi a cascata su uno spceficico oggetto utlizzando l'operatore cascade .. :
+ *
+ *  p.e. List list = [0];
+ *       lisd..add(1)
+ *       ..add(2)
+ *       ..add(3)
+ *       .
+ *       .
+ *       .
+ *       ..add(n);
+ *
+ *   Il vantaggio è che in casi complessi rende il codice più pulito, notare che ignoro il valore/oggetto ritornato dal metodo!
+ */
+
+
