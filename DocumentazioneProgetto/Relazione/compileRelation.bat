@@ -1,0 +1,1 @@
+tex Relazione.tex -o Relazione.pdf
